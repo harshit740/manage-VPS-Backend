@@ -16,10 +16,7 @@ const options = {
     limit: { /*...*/} // You can the limit options in any case
 };
 fastify.register(require('fastify-multipart'), options);
-fastify.register(require('fastify-cors'), {
-    // put your options here
-    origin: 'http://localhost:4200'
-});
+fastify.register(require('fastify-cors'),false);
 
 //routs
 fastify.register(require('./Routes/dashboard/dashbard'), {prefix: '/dashboard'});
@@ -35,7 +32,7 @@ fastify.get('/', async (request, reply) => {
 // Run the server!
 const start = async () => {
     try {
-        await fastify.listen(3000);
+        await fastify.listen(3000,'0.0.0.0');
         // fastify.log.info(`server listening on ${fastify.server.address().port}`)
     } catch (err) {
         fastify.log.error(err);

@@ -21,7 +21,7 @@ async function getList(options) {
                 "birthtime":att.birthtime,
                 "isFile": await fs.statSync(file).isFile(),
                 "ext": await pah.extname(file),
-              //  "Attributes": await fs.statSync(file)
+              "Attributes": att
             });
 
         }
