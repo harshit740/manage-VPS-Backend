@@ -17,16 +17,15 @@ async function getList(options) {
             }
             const file = path + "/" + items[i];
             att = await fs.statSync(file);
-            console.log(att)
             finalist.push({
                 "name": items[i],
                 "path": file,
-                "lastModified": att.mtime,
-                "lastAccesed": att.atime,
-                "birthtime": att.birthtime,
+                "lastModified": att.mtime.toString(),
+                "lastAccesed": att.atime.toString(),
+                "birthtime": att.birthtime.toString(),
                 "isFile": att.isFile(),
                 "ext": await pah.extname(file),
-                "Attributes": att
+                // "Attributes": att
             });
 
         }

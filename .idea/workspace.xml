@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df194a28-0f4c-4f92-9e19-174097ef43cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routes/FileManager/filemanager.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/FileManager/filemanager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handelers/filemanager/managefiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/handelers/filemanager/managefiles.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,16 +23,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/handelers/filemanager/managefiles.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/handelers/filemanager/managefiles.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1S8pW7oZsy0haGOTSvg4TKO6E3V" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes />
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -131,7 +126,8 @@
       <workItem from="1570857904560" duration="1238000" />
       <workItem from="1570892603861" duration="15000" />
       <workItem from="1570892681755" duration="180000" />
-      <workItem from="1570955109327" duration="3315000" />
+      <workItem from="1570955109327" duration="6552000" />
+      <workItem from="1570979998255" duration="681000" />
     </task>
     <servers />
   </component>
@@ -143,7 +139,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

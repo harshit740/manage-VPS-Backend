@@ -5,11 +5,11 @@ module.exports = function (fastify, opts, done) {
     fastify.post('/', async (request, reply) => {
         var options= request.body
         var list = await getList(options);
+        console.log(list)
         reply.send(list)
     });
     fastify.get('/list', async (request, reply) => {
         var list = await getList(base);
-        console.log(list);
         reply.send(list, ishidden = false)
     });
 
