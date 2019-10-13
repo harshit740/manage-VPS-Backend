@@ -3,25 +3,30 @@ var pah = require('path');
 
 async function getList(options) {
     var finalist = [];
-    var path = options.path
-    const isShowHidden = options.isHidden
+    var path = options.path;
+    const isShowHidden = options.isHidden;
+    let att;
     try {
-        var items = await fs.readdirSync(path+"/");
-        if (isShowHidden === false) {
-            items = items.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
-        }
-        for (var i = 0; i < items.length; i++) {
-            var file = path + "/"+ items[i];
-            att = await fs.statSync(file)
+        var items = await fs.readdirSync(path + "/");
+
+        for (let i = 0; i < items.length; i++) {
+            if (isShowHidden === false) {
+                if ((/(^|\/)\.[^\/\.]/g).test(items[i])){
+                    continue
+                }
+            }
+            const file = path + "/" + items[i];
+            att = await fs.statSync(file);
+            console.log(att)
             finalist.push({
                 "name": items[i],
                 "path": file,
-                "lastModified":att.mtime,
-                "lastAccesed":att.atime,
-                "birthtime":att.birthtime,
-                "isFile": await fs.statSync(file).isFile(),
+                "lastModified": att.mtime,
+                "lastAccesed": att.atime,
+                "birthtime": att.birthtime,
+                "isFile": att.isFile(),
                 "ext": await pah.extname(file),
-              "Attributes": att
+                "Attributes": att
             });
 
         }
